@@ -8,10 +8,12 @@ function App() {
   
   const [showProductList, setShowProductList] = useState(false);
 
+
   const handleGetStartedClick = () => {
     setShowProductList(true);
   };
 
+//这里定义了handleHomeClick也就是onHomeClick的函数行为
   const handleHomeClick = () => {
     setShowProductList(false);
   };
