@@ -101,10 +101,12 @@ body {
     background-color: #e74c3c;
     color: #fff;
     border: none;
+    border-radius: 11px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     margin-top: 10px;
+
 }
 
 .product-button:hover {

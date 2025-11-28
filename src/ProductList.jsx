@@ -319,6 +319,7 @@ function ProductList({ onHomeClick }) {
                                         <button 
                                             className={`product-button ${addedToCart[plant.name] ? 'disabled' : ''}`} 
                                             onClick={() => handleAddToCart(plant)}
+                                            style={addedToCart[plant.name] ? {opacity: 0.5, backgroundColor:'gray',cusrsor:'not-allowed'} : {}}
                                             disabled={addedToCart[plant.name]}
                                         >
                                             {addedToCart[plant.name] ? "Added" : "Add to Cart"}
