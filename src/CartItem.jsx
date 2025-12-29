@@ -1,7 +1,8 @@
-import React from 'react';
+//import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
+import PropTypes from "prop-types"
 
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
@@ -46,7 +47,7 @@ const CartItem = ({ onContinueShopping }) => {
     return itemCost * item.quantity;
   };
 
-  const handleCheckoutShopping = (e) => {
+  const handleCheckoutShopping = () => {
     alert('Functionality to be added for future reference');
   }
 
@@ -75,12 +76,15 @@ const CartItem = ({ onContinueShopping }) => {
       <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
-        <button className="get-started-button1">Checkout</button>
+        <button className="get-started-button1" onClick={handleCheckoutShopping}>Checkout</button>
       </div>
     </div>
   );
 };
 
+CartItem.propTypes = {
+  onContinueShopping: PropTypes.func,
+};
 export default CartItem;
 
 
